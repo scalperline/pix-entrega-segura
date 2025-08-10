@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Smartphone, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -11,8 +11,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="bg-gradient-primary p-2 rounded-lg">
-              <Smartphone className="h-6 w-6 text-white" />
+            <div className="p-2">
+              <img 
+                src="/lovable-uploads/5e1a1c90-1303-440f-86d2-be4d07a5653e.png" 
+                alt="Pix On Delivery Logo" 
+                className="h-8 w-8"
+              />
             </div>
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Pix On Delivery
