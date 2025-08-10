@@ -1,11 +1,11 @@
-
 import { Star, Quote } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Testimonials = () => {
   const testimonials = [
     {
       name: "Carlos Silva",
-      business: "Pizzaria do Carlos",
+      business: "Pizzaria do Carlos", 
       city: "São Paulo, SP",
       content: "Em 2 meses usando o Pix On Delivery, não tivemos nenhuma fraude. Antes perdíamos uns R$ 150 por mês com comprovante falso. O sistema se pagou sozinho!",
       rating: 5,
@@ -14,7 +14,7 @@ const Testimonials = () => {
     {
       name: "Ana Ferreira",
       business: "Farmácia Central",
-      city: "Belo Horizonte, MG",
+      city: "Belo Horizonte, MG", 
       content: "Acabou aquela correria de ficar conferindo extrato toda hora. Agora sei em tempo real se o pagamento entrou. Meus entregadores adoraram a praticidade.",
       rating: 5,
       avatar: "👩‍⚕️"
