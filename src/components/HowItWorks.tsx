@@ -1,43 +1,58 @@
 
-import { QrCode, Smartphone, CheckCircle, BarChart3 } from "lucide-react";
+import { ShoppingCart, Calendar, Eye, Smartphone, Shield, Zap, CreditCard } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: Smartphone,
-      title: "1. Cadastre seus entregadores",
-      description: "Adicione sua equipe na plataforma web e eles baixam o app gratuito nos celulares.",
-      color: "bg-blue-100 text-blue-600"
-    },
-    {
-      icon: QrCode,
-      title: "2. QR Code automático na entrega",
-      description: "Na chegada ao cliente, o app gera um QR Code Pix único com o valor exato do pedido.",
-      color: "bg-pix-green/10 text-pix-green"
-    },
-    {
-      icon: CheckCircle,
-      title: "3. Confirmação instantânea",
-      description: "Assim que o pagamento é feito, a tela muda para 'PAGO' automaticamente. Só então o produto é entregue.",
+      icon: ShoppingCart,
+      title: "Escolha o Produto",
+      description: "Selecione o que deseja comprar no marketplace Pix On Delivery.",
       color: "bg-green-100 text-green-600"
     },
     {
-      icon: BarChart3,
-      title: "4. Dashboard em tempo real",
-      description: "Acompanhe todos os pagamentos em tempo real, com relatórios já conciliados automaticamente.",
+      icon: Calendar,
+      title: "Agende a Entrega",
+      description: "Informe seu endereço e escolha a data e hora ideais.",
+      color: "bg-blue-100 text-blue-600"
+    },
+    {
+      icon: Eye,
+      title: "Receba e Confira",
+      description: "O entregador chega com seu produto para inspeção. Veja, toque e teste antes de pagar.",
       color: "bg-purple-100 text-purple-600"
+    },
+    {
+      icon: Smartphone,
+      title: "Pague com Pix na Hora",
+      description: "Após confirmar, pague instantaneamente via Pix. Sem taxas, sem maquininhas, só com o celular.",
+      color: "bg-pix-green/10 text-pix-green"
+    }
+  ];
+
+  const features = [
+    {
+      icon: Shield,
+      text: "100% à prova de fraudes"
+    },
+    {
+      icon: Zap,
+      text: "Pagamento instantâneo"
+    },
+    {
+      icon: CreditCard,
+      text: "Sem taxas adicionais"
     }
   ];
 
   return (
-    <section id="como-funciona" className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Como funciona o <span className="text-pix-green">Pix On Delivery</span>
+            💡 Como funciona o <span className="text-pix-green">Pix On Delivery</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Em 4 passos simples, você elimina 100% das fraudes e automatiza todo o processo de cobrança na entrega.
+            O jeito mais seguro, rápido e simples de comprar online no Brasil.
           </p>
         </div>
 
@@ -53,46 +68,25 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-primary rounded-2xl p-8 lg:p-12 text-white">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-                🛡️ 100% À prova de fraudes
-              </h3>
-              <p className="text-lg mb-6 text-gray-100">
-                Não existe mais risco de golpe do comprovante falso. A confirmação é direta dos servidores 
-                do banco via API, impossível de falsificar.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-300" />
-                  <span>Pagamento confirmado em tempo real</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-300" />
-                  <span>Sem acesso às contas da empresa</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-300" />
-                  <span>Relatórios automáticos e conciliados</span>
-                </li>
-              </ul>
+        <div className="bg-gradient-primary rounded-2xl p-8 lg:p-12 text-white mb-12">
+          <div className="text-center">
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 inline-block mb-6">
+              <Shield className="h-12 w-12 mx-auto text-white mb-3" />
+              <h3 className="text-2xl font-bold mb-2">Você só paga se receber</h3>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-center">
-                <div className="text-4xl mb-2">📱</div>
-                <h4 className="font-bold mb-2">Tela do Entregador</h4>
-                <div className="bg-white text-gray-900 rounded-lg p-4 mb-4">
-                  <div className="font-bold text-lg text-green-600 mb-2">✅ PAGAMENTO CONFIRMADO</div>
-                  <div className="text-sm">Pedido #1234 - R$ 45,90</div>
-                  <div className="text-xs text-gray-500 mt-1">Pode entregar o produto</div>
-                </div>
-                <p className="text-sm text-gray-200">
-                  Sinal verde para entregar apenas após confirmação real do pagamento
-                </p>
-              </div>
-            </div>
+            <p className="text-xl lg:text-2xl font-semibold mb-8 leading-relaxed">
+              Pix On Delivery combina o melhor do pagamento digital com a confiança do pagamento na entrega.
+            </p>
           </div>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-lg animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+              <feature.icon className="h-6 w-6 text-pix-green" />
+              <span className="font-semibold text-gray-900">{feature.text}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
