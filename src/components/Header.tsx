@@ -1,24 +1,16 @@
-
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+  return <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="p-2">
-              <img 
-                src="/lovable-uploads/2a740ebe-550c-4fb5-ad89-df03ac5e3a12.png" 
-                alt="Pix On Delivery Logo" 
-                className="h-8 w-8"
-              />
+              <img src="/lovable-uploads/2a740ebe-550c-4fb5-ad89-df03ac5e3a12.png" alt="Pix On Delivery Logo" className="h-8 w-8" />
             </div>
-            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <span className="bg-gradient-primary bg-clip-text font-bold text-xl text-gray-950">
               Pix On Delivery
             </span>
           </div>
@@ -43,17 +35,13 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 space-y-4">
+        {isMenuOpen && <nav className="md:hidden mt-4 pb-4 space-y-4">
             <a href="#como-funciona" className="block text-gray-700 hover:text-pix-green transition-colors">
               Como Funciona
             </a>
@@ -71,11 +59,8 @@ const Header = () => {
                 Começar Grátis
               </Button>
             </div>
-          </nav>
-        )}
+          </nav>}
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
