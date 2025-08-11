@@ -13,7 +13,7 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <div className="p-2">
               <img 
-                src="/lovable-uploads/5e1a1c90-1303-440f-86d2-be4d07a5653e.png" 
+                src="/lovable-uploads/2a740ebe-550c-4fb5-ad89-df03ac5e3a12.png" 
                 alt="Pix On Delivery Logo" 
                 className="h-8 w-8"
               />
