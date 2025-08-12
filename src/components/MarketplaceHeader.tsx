@@ -1,14 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, ShoppingCart, Heart, Bell, User, Truck, Shield } from "lucide-react";
 import { useState } from "react";
-
 const MarketplaceHeader = () => {
   const [searchQuery, setSearchQuery] = useState("");
-
-  return (
-    <>
+  return <>
       {/* Top Bar */}
       <div className="bg-gradient-marketplace text-white py-2 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
@@ -35,31 +31,16 @@ const MarketplaceHeader = () => {
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <div className="p-2">
-                <img 
-                  src="/lovable-uploads/2a740ebe-550c-4fb5-ad89-df03ac5e3a12.png" 
-                  alt="Pix On Delivery Logo" 
-                  className="h-8 w-8" 
-                />
+                <img src="/lovable-uploads/2a740ebe-550c-4fb5-ad89-df03ac5e3a12.png" alt="Pix On Delivery Logo" className="h-8 w-8" />
               </div>
-              <span className="text-xl font-bold text-gray-900">
-                Pix On Delivery
-              </span>
+              <span className="text-xl font-bold text-gray-900">Pix On Delivery</span>
             </div>
 
             {/* Search Bar */}
             <div className="flex-1 max-w-2xl">
               <div className="relative">
-                <Input
-                  type="text"
-                  placeholder="O que você está procurando?"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-4 pr-12 py-3 text-lg border-2 border-gray-200 focus:border-marketplace-blue rounded-lg"
-                />
-                <Button
-                  size="sm"
-                  className="absolute right-1 top-1 bg-flash-orange hover:bg-flash-orange/90 text-white px-6"
-                >
+                <Input type="text" placeholder="O que você está procurando?" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="pl-4 pr-12 py-3 text-lg border-2 border-gray-200 focus:border-marketplace-blue rounded-lg" />
+                <Button size="sm" className="absolute right-1 top-1 bg-flash-orange hover:bg-flash-orange/90 text-white px-6">
                   <Search className="h-4 w-4 mr-2" />
                   Buscar
                 </Button>
@@ -94,8 +75,6 @@ const MarketplaceHeader = () => {
           </div>
         </div>
       </header>
-    </>
-  );
+    </>;
 };
-
 export default MarketplaceHeader;
