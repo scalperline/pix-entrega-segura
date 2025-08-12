@@ -41,35 +41,36 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+    <section className="py-16 lg:py-24 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* Header */}
+        <div className="text-center mb-12 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6">
             💡 Como funciona o <span className="text-pix-green">Pix On Delivery</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             A jornada mais segura, rápida e simples para comprar online no Brasil.
           </p>
         </div>
 
         {/* Timeline Container */}
-        <div>
+        <div className="relative">
           {/* Mobile Timeline - Vertical */}
           <div className="block lg:hidden">
-            <div className="relative">
+            <div className="relative max-w-md mx-auto">
               {/* Vertical Line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pix-green via-logzz-teal to-pix-green"></div>
+              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pix-green via-logzz-teal to-pix-green opacity-30"></div>
               
               {timelineSteps.map((step, index) => (
-                <div key={index} className="relative flex items-start mb-12 last:mb-0">
+                <div key={index} className="relative flex items-start mb-8 last:mb-0">
                   {/* Timeline Dot */}
-                  <div className={`${step.color} ${step.borderColor} relative z-10 p-3 rounded-full border-4 bg-white shadow-lg flex-shrink-0`}>
-                    <step.icon className="h-6 w-6" />
+                  <div className={`${step.color} ${step.borderColor} relative z-10 p-3 rounded-full border-2 bg-white shadow-md flex-shrink-0`}>
+                    <step.icon className="h-5 w-5" />
                   </div>
                   
                   {/* Content */}
-                  <div className="ml-6 bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
+                  <div className="ml-4 bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex-1 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <h3 className="text-base font-bold text-gray-900 mb-2">{step.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
                   </div>
                 </div>
@@ -81,19 +82,19 @@ const HowItWorks = () => {
           <div className="hidden lg:block">
             <div className="relative">
               {/* Horizontal Line */}
-              <div className="absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-pix-green via-logzz-teal to-pix-green"></div>
+              <div className="absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-pix-green via-logzz-teal to-pix-green opacity-30"></div>
               
-              <div className="grid grid-cols-5 gap-8">
+              <div className="grid grid-cols-5 gap-4 xl:gap-6">
                 {timelineSteps.map((step, index) => (
                   <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                     {/* Timeline Dot */}
-                    <div className={`${step.color} ${step.borderColor} relative z-10 p-4 rounded-full border-4 bg-white shadow-lg w-20 h-20 mx-auto mb-6 flex items-center justify-center`}>
-                      <step.icon className="h-8 w-8" />
+                    <div className={`${step.color} ${step.borderColor} relative z-10 p-3 xl:p-4 rounded-full border-2 bg-white shadow-md w-16 h-16 xl:w-20 xl:h-20 mx-auto mb-4 xl:mb-6 flex items-center justify-center transition-transform duration-300 hover:scale-110`}>
+                      <step.icon className="h-6 w-6 xl:h-8 xl:w-8" />
                     </div>
                     
                     {/* Content Card */}
-                    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 h-full">
-                      <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
+                    <div className="bg-white rounded-lg p-4 xl:p-6 shadow-sm border border-gray-100 h-full transition-shadow duration-300 hover:shadow-md">
+                      <h3 className="text-base xl:text-lg font-bold text-gray-900 mb-2 xl:mb-3">{step.title}</h3>
                       <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
                     </div>
                   </div>
