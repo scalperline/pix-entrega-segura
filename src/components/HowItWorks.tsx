@@ -1,5 +1,5 @@
 
-import { ShoppingCart, Calendar, Eye, Smartphone, Shield, Zap, CreditCard, Truck } from "lucide-react";
+import { ShoppingCart, Calendar, Truck, Eye, Smartphone } from "lucide-react";
 
 const HowItWorks = () => {
   const timelineSteps = [
@@ -40,21 +40,6 @@ const HowItWorks = () => {
     }
   ];
 
-  const features = [
-    {
-      icon: Shield,
-      text: "100% à prova de fraudes"
-    },
-    {
-      icon: Zap,
-      text: "Pagamento instantâneo"
-    },
-    {
-      icon: CreditCard,
-      text: "Sem taxas adicionais"
-    }
-  ];
-
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -68,7 +53,7 @@ const HowItWorks = () => {
         </div>
 
         {/* Timeline Container */}
-        <div className="mb-16">
+        <div>
           {/* Mobile Timeline - Vertical */}
           <div className="block lg:hidden">
             <div className="relative">
@@ -111,42 +96,11 @@ const HowItWorks = () => {
                       <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
                       <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
                     </div>
-                    
-                    {/* Step Number */}
-                    <div className="mt-4 text-xs font-semibold text-gray-400">
-                      PASSO {index + 1}
-                    </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Logzz Partnership Highlight */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 mb-12 animate-slide-up">
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Truck className="h-8 w-8 text-logzz-teal" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Entrega garantida pela <span className="text-logzz-teal">Logzz</span>
-              </h3>
-            </div>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Confiamos na Logzz para cuidar de toda a logística de entrega. Uma empresa especializada 
-              em last-mile delivery que garante que seus produtos cheguem com segurança e pontualidade.
-            </p>
-          </div>
-        </div>
-
-        {/* Trust Features */}
-        <div className="flex flex-wrap justify-center gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-lg animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <feature.icon className="h-6 w-6 text-pix-green" />
-              <span className="font-semibold text-gray-900">{feature.text}</span>
-            </div>
-          ))}
         </div>
       </div>
     </section>
