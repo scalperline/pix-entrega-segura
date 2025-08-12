@@ -1,6 +1,7 @@
 
 import MarketplaceHeader from "@/components/MarketplaceHeader";
 import HeroBanner from "@/components/HeroBanner";
+import HowItWorks from "@/components/HowItWorks";
 import FlashDeals from "@/components/FlashDeals";
 
 const Index = () => {
@@ -8,6 +9,7 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50">
       <MarketplaceHeader />
       <HeroBanner />
+      <HowItWorks />
       <FlashDeals />
     </div>
   );
