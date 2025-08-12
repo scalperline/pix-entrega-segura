@@ -57,7 +57,13 @@ const HowItWorks = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <div 
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: 'radial-gradient(circle, #e5e7eb 1px, transparent 1px)',
+          backgroundSize: '20px 20px'
+        }}
+      ></div>
       <div className="absolute top-10 right-10 w-32 h-32 bg-pix-green/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 left-10 w-40 h-40 bg-marketplace-blue/10 rounded-full blur-3xl"></div>
       
@@ -148,13 +154,6 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .bg-grid-pattern {
-          background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
-          background-size: 20px 20px;
-        }
-      `}</style>
     </section>
   );
 };
