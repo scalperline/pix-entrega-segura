@@ -167,10 +167,10 @@ const FlashDeals = () => {
                 </div>
               </div>
 
-              {/* CTA Button */}
+              {/* CTA Button - Updated to use primary green color */}
               <Button 
                 size="sm" 
-                className="w-full bg-flash-orange hover:bg-flash-orange/90 text-white font-semibold"
+                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold"
               >
                 Comprar Agora
               </Button>
