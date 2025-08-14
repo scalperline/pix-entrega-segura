@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,8 +14,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Marketplace Primary Colors */
-    --primary: 174 72% 56%; /* Logzz Teal */
+    /* Marketplace Primary Colors - Updated to Green */
+    --primary: 142 76% 36%; /* Pix Green */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 100% 50%;
@@ -33,7 +32,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 174 72% 56%;
+    --ring: 142 76% 36%; /* Updated to green */
 
     --radius: 0.5rem;
 
@@ -51,7 +50,7 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 174 72% 66%;
+    --primary: 142 76% 50%; /* Green for dark mode */
     --primary-foreground: 222.2 84% 4.9%;
     --secondary: 210 100% 60%;
     --secondary-foreground: 210 40% 98%;
@@ -63,7 +62,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 174 72% 66%;
+    --ring: 142 76% 50%; /* Green for dark mode */
   }
 }
 
