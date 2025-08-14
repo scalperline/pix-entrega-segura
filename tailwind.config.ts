@@ -63,6 +63,11 @@ export default {
           light: 'hsl(210 100% 60%)',
           dark: 'hsl(210 100% 40%)',
         },
+        'marketplace-yellow': {
+          DEFAULT: 'hsl(45 100% 50%)',
+          light: 'hsl(45 100% 60%)',
+          dark: 'hsl(45 100% 40%)',
+        },
         'flash-orange': {
           DEFAULT: 'hsl(25 95% 53%)',
           light: 'hsl(25 95% 63%)',
@@ -116,7 +121,8 @@ export default {
       backgroundImage: {
         'gradient-marketplace': 'linear-gradient(135deg, hsl(174 72% 56%) 0%, hsl(210 100% 50%) 100%)',
         'gradient-flash': 'linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(25 95% 43%) 100%)',
-        'gradient-pix': 'linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 25%) 100%)'
+        'gradient-pix': 'linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 25%) 100%)',
+        'gradient-yellow': 'linear-gradient(135deg, hsl(45 100% 50%) 0%, hsl(45 100% 40%) 100%)'
       }
     }
   },
