@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -71,11 +72,6 @@ export default {
           DEFAULT: 'hsl(174 72% 56%)',
           light: 'hsl(174 72% 66%)',
           dark: 'hsl(174 72% 46%)',
-        },
-        'marketplace-yellow': {
-          DEFAULT: '#FFB800',
-          light: '#FFC533',
-          dark: '#E6A600',
         }
       },
       borderRadius: {
