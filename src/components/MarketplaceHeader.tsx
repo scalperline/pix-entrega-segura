@@ -1,10 +1,14 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, ShoppingCart, Heart, Bell, User, Truck, Shield } from "lucide-react";
 import { useState } from "react";
+
 const MarketplaceHeader = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  return <>
+
+  return (
+    <>
       {/* Top Bar */}
       <div className="bg-gradient-marketplace text-white py-2 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
@@ -25,7 +29,7 @@ const MarketplaceHeader = () => {
       </div>
 
       {/* Main Header */}
-      <header className="bg-white shadow-sm border-b sticky top-0 z-50">
+      <header className="bg-white shadow-sm border-b sticky top-0 z-50" style={{ backgroundColor: '#FFB800' }}>
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between gap-4">
             {/* Logo */}
@@ -33,14 +37,23 @@ const MarketplaceHeader = () => {
               <div className="p-2">
                 <img src="/lovable-uploads/2a740ebe-550c-4fb5-ad89-df03ac5e3a12.png" alt="Pix On Delivery Logo" className="h-8 w-8" />
               </div>
-              <span className="text-xl font-bold text-gray-900">Pix On Delivery</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white">Pix On Delivery</span>
+                <span className="text-xs text-white/80 -mt-1">Powered by Logzz</span>
+              </div>
             </div>
 
             {/* Search Bar */}
             <div className="flex-1 max-w-2xl">
               <div className="relative">
-                <Input type="text" placeholder="O que você está procurando?" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="pl-4 pr-12 py-3 text-lg border-2 border-gray-200 focus:border-marketplace-blue rounded-lg" />
-                <Button size="sm" className="absolute right-1 top-1 bg-flash-orange hover:bg-flash-orange/90 text-white px-6">
+                <Input 
+                  type="text" 
+                  placeholder="O que você está procurando?" 
+                  value={searchQuery} 
+                  onChange={e => setSearchQuery(e.target.value)} 
+                  className="pl-4 pr-12 py-3 text-lg border-2 border-white/20 focus:border-white rounded-lg bg-white/10 text-white placeholder:text-white/70 focus:bg-white focus:text-gray-900 focus:placeholder:text-gray-500" 
+                />
+                <Button size="sm" className="absolute right-1 top-1 bg-white text-gray-900 hover:bg-white/90 px-6 font-medium">
                   <Search className="h-4 w-4 mr-2" />
                   Buscar
                 </Button>
@@ -49,12 +62,12 @@ const MarketplaceHeader = () => {
 
             {/* User Actions */}
             <div className="flex items-center gap-4">
-              <Button variant="ghost" size="sm" className="relative">
+              <Button variant="ghost" size="sm" className="relative text-white hover:bg-white/10">
                 <Heart className="h-5 w-5" />
                 <span className="ml-2 hidden md:inline">Favoritos</span>
               </Button>
               
-              <Button variant="ghost" size="sm" className="relative">
+              <Button variant="ghost" size="sm" className="relative text-white hover:bg-white/10">
                 <Bell className="h-5 w-5" />
                 <span className="ml-2 hidden md:inline">Notificações</span>
                 <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -62,12 +75,12 @@ const MarketplaceHeader = () => {
                 </div>
               </Button>
 
-              <Button variant="ghost" size="sm" className="relative">
+              <Button variant="ghost" size="sm" className="relative text-white hover:bg-white/10">
                 <ShoppingCart className="h-5 w-5" />
                 <span className="ml-2 hidden md:inline">Carrinho</span>
               </Button>
 
-              <Button variant="ghost" size="sm">
+              <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
                 <User className="h-5 w-5" />
                 <span className="ml-2 hidden md:inline">Minha Conta</span>
               </Button>
@@ -75,6 +88,8 @@ const MarketplaceHeader = () => {
           </div>
         </div>
       </header>
-    </>;
+    </>
+  );
 };
+
 export default MarketplaceHeader;
